@@ -13,7 +13,7 @@ WHERE
 ### Задание 2
 
 ![alt text](https://github.com/Limzor/IndexHW/blob/main/Screenshot_2.png)
-
+```sql
 SELECT DISTINCT 
     CONCAT(c.last_name, ' ', c.first_name) AS customer_name, 
     SUM(p.amount) OVER (PARTITION BY c.customer_id, f.title) AS total_amount
@@ -24,9 +24,11 @@ JOIN inventory i ON r.inventory_id = i.inventory_id
 JOIN film f ON i.film_id = f.film_id
 WHERE p.payment_date >= '2005-07-30 00:00:00' 
   AND p.payment_date < '2005-07-31 00:00:00';
-
+```
+```sql
 CREATE INDEX idx_payment_date ON payment(payment_date);
 CREATE INDEX idx_rental_date_customer_inventory ON rental(rental_date, customer_id, inventory_id);
 CREATE INDEX idx_customer_id ON customer(customer_id);
 CREATE INDEX idx_inventory_id ON inventory(inventory_id);
 CREATE INDEX idx_film_id ON film(film_id);
+```
