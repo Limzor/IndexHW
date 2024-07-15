@@ -1,5 +1,6 @@
 # Домашнее задание к занятию "`Индексы`" - `Фёдоров Илья`
 ### Задание 1
+```sql
 SELECT 
     CONCAT(ROUND(
         (SUM(index_length) / SUM(data_length)) * 100, 2), '%'
@@ -8,8 +9,10 @@ FROM
     information_schema.tables
 WHERE 
     table_schema = 'sakila';
+```
 
 ![alt text](https://github.com/Limzor/IndexHW/blob/main/Screenshot_1.png)
+
 ### Задание 2
 
 ![alt text](https://github.com/Limzor/IndexHW/blob/main/Screenshot_2.png)
