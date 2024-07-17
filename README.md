@@ -35,3 +35,6 @@ CREATE INDEX idx_customer_id ON customer(customer_id);
 CREATE INDEX idx_inventory_id ON inventory(inventory_id);
 CREATE INDEX idx_film_id ON film(film_id);
 ```
+### P.S
+Запрос explain analyze
+![alt text](https://github.com/Limzor/IndexHW/blob/main/Screenshot_4.png)
